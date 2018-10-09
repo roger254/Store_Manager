@@ -61,9 +61,20 @@ body, html {
   margin-right: 30px;
 }
 
-a {
+
+.main_heading, a {
   text-decoration: none;
   color: #feffff;
+  font-family: 'Gruppo';
+  font-size: 25px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.main_heading {
+  color: #222629;
+  font-size: 38px;
+  font-weight: 800;
 }
 
 .center_div {
@@ -148,7 +159,7 @@ a {
 
 .modal_footer, .modal_header {
   padding: 2px 16px;
-  background-color: #5a5560  ;
+  background-color: #5a5560;
   color: #faed26;
 }
 
@@ -159,7 +170,7 @@ a {
 }
 
 .item_table tbody {
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .item_table th, td {
@@ -180,6 +191,6 @@ a {
   background-color: #f5f5f5;
 }
 
-#searchInput{
+#searchInput {
   visibility: hidden;
 }
