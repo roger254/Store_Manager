@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/main_page.css">
+</head>
+
+<body>
+  <div class="main_div">
+    <div class="nav_div">
+      <div class="header_div">
+        <button type="button" name="button">Switch</button>
+      </div>
+    </div>
+
+    <div class="side_div">
+      <h1 class="main_heading">Web-Store</h1>
+      <ul>
+        <li><a href="#">View Sales</a></li>
+        <li><a href="#">View Items</a></li>
+        <li><a href="#">View User</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="center_div">
+      <div class="wrap_div">
+        <button type="button" name="searchButton" onclick="showItem()">Search</button>
+        <input id="searchInput" type="search" name="searchedItem" placeholder="Search For: ">
+      </div>
+    </div>
+  </div>
+  <!--Search Item Modal-->
+  <div class="main_modal" id="main_modal">
+    <div class="modal_wrap">
+      <div class="modal_header">
+        <span class="exit">&times</span>
+        <h2>Searched Item:</h2>
+      </div>
+      <div class="modal_body" id="modal_body_id">
+        <table class="item_table" id="my_table">
+           <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+
+          <tr>
+            <td>Item 1</td>
+            <td>250</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>Item 2</td>
+            <td>350</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>Item 3</td>
+            <td>590</td>
+            <td>250</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal_footer">
+        <h2 id="modal_footer_text">Footer</h2>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/main_page.js">
+  </script>
+</body>
+
+</html>
