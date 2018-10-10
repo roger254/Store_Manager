@@ -8,10 +8,14 @@ function showItem() {
 
 var searchInput = document.getElementById("searchInput");
 var modal = document.getElementById("main_modal");
-var close = document.getElementsByClassName("exit")[0];
+var item_modal = document.getElementById("sales_modal");
+var close = document.getElementsByClassName("exit");
 
-close.onclick = function() {
-  modal.style.display = "none";
+for (var i = 0; i < close.length; i++) {
+  close[i].onclick = function functionName() {
+    modal.style.display = "none";
+    item_modal.style.display = "none";
+  }
 }
 
 function searchTable() {
@@ -54,3 +58,33 @@ onRowClick('my_table', function(row) {
   document.getElementById("modal_footer_text").innerHTML = value + " added to Checkout";
   console.log('<value>>', value)
 })
+
+function salesButton() {
+  item_modal.style.display = 'block';
+}
+
+// Handle the user login type
+var currentUser = "User";
+
+var switchInput = document.querySelector("input[name=user]");
+switchInput.addEventListener('change', function() {
+  if (this.checked) {
+    if (currentUser == "User") {
+      currentUser = "Admin";
+      console.log(currentUser)
+    }
+  } else {
+    currentUser = "User"
+    console.log(currentUser)
+  }
+});
+
+buttons = document.getElementsByClassName("admin");
+for (var i = 0; i < buttons.length; i++) {
+  if (currentUser != "Admin") {
+    buttons[i].disable = true;
+  }
+  else {
+    buttons[i].disable = false;
+  }
+}
