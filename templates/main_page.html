@@ -25,7 +25,7 @@
       <h1 class="main_heading">Web-Store</h1>
       <ul>
         <li><a href="#" onclick="salesButton()">View Sales</a></li>
-        <li><a href="#">View Items</a></li>
+        <li><a href="#" onclick="showItems()">View Items</a></li>
         <li><a href="#" onclick="showUsers()">View User</a></li>
         <li><a href="#">Logout</a></li>
       </ul>
@@ -120,6 +120,7 @@
     </div>
   </div>
 
+  <!-- Add User Modal -->
   <div class="main_modal" id="users_modal">
     <div class="modal_wrap">
       <div class="modal_header">
@@ -127,18 +128,16 @@
           <button type="button" onclick="addUserForm()" id="view_add_user" name="button">Add User</button>
           <div id="add_user">
             <form class="form">
-            <h2>Add User</h2>
-
-            <p type="Name:"><input placeholder="User Name"></input></p>
-            <p type="Password:"><input type="password" placeholder="Password"></input></p>
-            <p type="Confirm Password:"><input type="password" placeholder="Confirm Password"></input></p>
-            <button onclick="addUser()">Add User</button>
-            <div>
-              <span class="fa fa-phone"></span>Web Store
-              <span class="fa fa-envelope-o"></span> contact@company.com
-            </div>
-          </form>
-
+              <h2>Add User</h2>
+              <p type="Name:"><input placeholder="User Name"></input></p>
+              <p type="Password:"><input type="password" placeholder="Password"></input></p>
+              <p type="Confirm Password:"><input type="password" placeholder="Confirm Password"></input></p>
+              <button onclick="addUser()">Add User</button>
+              <div>
+                <span class="fa fa-phone"></span>Web Store
+                <span class="fa fa-envelope-o"></span> contact@company.com
+              </div>
+            </form>
           </div>
         </div>
         <span class="exit">&times</span>
@@ -177,6 +176,45 @@
     </div>
   </div>
 
+  <!-- View Item Modal -->
+  <div class="main_modal" id="view_items_modal">
+    <div class="modal_wrap">
+      <div class="modal_header">
+        <span class="exit">&times</span>
+        <h2>All Inventory</h2>
+      </div>
+      <div class="modal_body" id="modal_body_id">
+        <table class="item_table" id="my_table">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+
+          <tr>
+            <td>Item 1</td>
+            <td>250</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>Item 2</td>
+            <td>350</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>Item 3</td>
+            <td>590</td>
+            <td>250</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal_footer">
+        <button type="button" name="addItem">Add Item</button>
+        <button type="button" name="editItem">Edit Item</button>
+        <button type="button" name="deleteItem">Delete Item</button>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="../js/main_page.js">
   </script>
 </body>

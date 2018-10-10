@@ -11,6 +11,7 @@ var modal = document.getElementById("main_modal");
 var item_modal = document.getElementById("sales_modal");
 var users_modal = document.getElementById("users_modal");
 var view_user_button = document.getElementById("view_add_user");
+var view_items = document.getElementById("view_items_modal");
 var add_user_modal = document.getElementById("add_user");
 var close = document.getElementsByClassName("exit");
 
@@ -20,6 +21,7 @@ for (var i = 0; i < close.length; i++) {
     item_modal.style.display = "none";
     users_modal.style.display = "none";
     add_user_modal.style.display = "none";
+    view_items_modal.style.display = "none";
   }
 }
 
@@ -80,6 +82,10 @@ function addUserForm() {
 function addUser() {
   add_user_modal.style.display = "none";
   view_user_button.style.display = "block";
+}
+
+function showItems(){
+  view_items_modal.style.display = "block";
 }
 // Handle the user login type
 // var currentUser = "User";
