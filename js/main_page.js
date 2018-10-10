@@ -9,12 +9,17 @@ function showItem() {
 var searchInput = document.getElementById("searchInput");
 var modal = document.getElementById("main_modal");
 var item_modal = document.getElementById("sales_modal");
+var users_modal = document.getElementById("users_modal");
+var view_user_button = document.getElementById("view_add_user");
+var add_user_modal = document.getElementById("add_user");
 var close = document.getElementsByClassName("exit");
 
 for (var i = 0; i < close.length; i++) {
   close[i].onclick = function functionName() {
     modal.style.display = "none";
     item_modal.style.display = "none";
+    users_modal.style.display = "none";
+    add_user_modal.style.display = "none";
   }
 }
 
@@ -63,28 +68,41 @@ function salesButton() {
   item_modal.style.display = 'block';
 }
 
-// Handle the user login type
-var currentUser = "User";
-
-var switchInput = document.querySelector("input[name=user]");
-switchInput.addEventListener('change', function() {
-  if (this.checked) {
-    if (currentUser == "User") {
-      currentUser = "Admin";
-      console.log(currentUser)
-    }
-  } else {
-    currentUser = "User"
-    console.log(currentUser)
-  }
-});
-
-buttons = document.getElementsByClassName("admin");
-for (var i = 0; i < buttons.length; i++) {
-  if (currentUser != "Admin") {
-    buttons[i].disable = true;
-  }
-  else {
-    buttons[i].disable = false;
-  }
+function showUsers() {
+  users_modal.style.display = 'block'
 }
+
+function addUserForm() {
+  add_user_modal.style.display = "block";
+  view_user_button.style.display = "none";
+}
+
+function addUser() {
+  add_user_modal.style.display = "none";
+  view_user_button.style.display = "block";
+}
+// Handle the user login type
+// var currentUser = "User";
+//
+// var switchInput = document.querySelector("input[name=user]");
+// switchInput.addEventListener('change', function() {
+//   if (this.checked) {
+//     if (currentUser == "User") {
+//       currentUser = "Admin";
+//       console.log(currentUser)
+//     }
+//   } else {
+//     currentUser = "User"
+//     console.log(currentUser)
+//   }
+// });
+//
+// buttons = document.getElementsByClassName("admin");
+// for (var i = 0; i < buttons.length; i++) {
+//   if (currentUser != "Admin") {
+//     buttons[i].disable = true;
+//   }
+//   else {
+//     buttons[i].disable = false;
+//   }
+// }

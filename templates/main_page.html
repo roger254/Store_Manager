@@ -14,7 +14,7 @@
       <div class="header_div">
         <div class="switch_button_div">
           <label class="switch">
-            <input type="checkbox" name="user" id="switchInput" >
+            <input type="checkbox" name="user" id="switchInput">
             <span class="slider round"></span>
           </label>
         </div>
@@ -26,7 +26,7 @@
       <ul>
         <li><a href="#" onclick="salesButton()">View Sales</a></li>
         <li><a href="#">View Items</a></li>
-        <li><a href="#">View User</a></li>
+        <li><a href="#" onclick="showUsers()">View User</a></li>
         <li><a href="#">Logout</a></li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="modal_body" id="modal_body_id">
         <table class="item_table" id="my_table">
-           <tr>
+          <tr>
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -93,7 +93,7 @@
       </div>
       <div class="sales_modal_body" id="sales_modal_id">
         <table class="item_table" id="sales_tables">
-           <tr>
+          <tr>
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -116,10 +116,67 @@
         </table>
       </div>
       <div class="modal_footer">
-
       </div>
     </div>
   </div>
+
+  <div class="main_modal" id="users_modal">
+    <div class="modal_wrap">
+      <div class="modal_header">
+        <div class="addUser_div">
+          <button type="button" onclick="addUserForm()" id="view_add_user" name="button">Add User</button>
+          <div id="add_user">
+            <form class="form">
+            <h2>Add User</h2>
+
+            <p type="Name:"><input placeholder="User Name"></input></p>
+            <p type="Password:"><input type="password" placeholder="Password"></input></p>
+            <p type="Confirm Password:"><input type="password" placeholder="Confirm Password"></input></p>
+            <button onclick="addUser()">Add User</button>
+            <div>
+              <span class="fa fa-phone"></span>Web Store
+              <span class="fa fa-envelope-o"></span> contact@company.com
+            </div>
+          </form>
+
+          </div>
+        </div>
+        <span class="exit">&times</span>
+        <h2>All Users</h2>
+      </div>
+      <div class="sales_modal_body" id="sales_modal_id">
+        <table class="item_table" id="sales_tables">
+          <tr>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Days Working</th>
+            <th>Total Sales</th>
+          </tr>
+          <tr>
+            <td>User 1</td>
+            <td>pass1</td>
+            <td>5</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+            <td>User 2</td>
+            <td>pass2</td>
+            <td>4</td>
+            <td>4000</td>
+          </tr>
+          <tr>
+            <td>User 3</td>
+            <td>pass2</td>
+            <td>4</td>
+            <td>5000</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal_footer">
+      </div>
+    </div>
+  </div>
+
   <script type="text/javascript" src="../js/main_page.js">
   </script>
 </body>
