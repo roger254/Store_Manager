@@ -84,9 +84,26 @@ function addUser() {
   view_user_button.style.display = "block";
 }
 
-function showItems(){
+function showItems() {
   view_items_modal.style.display = "block";
 }
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+var open = false
+function handleNav() {
+  if (open) {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "#3aafa9";
+    open = !open;
+  } else {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    open = !open;
+  }
+}
+
 // Handle the user login type
 // var currentUser = "User";
 //
