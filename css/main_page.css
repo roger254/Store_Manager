@@ -267,7 +267,9 @@ input:checked+.slider:before {
   animation-name: showModal;
   animation-duration: 0.5s
 }
-
+#add_user{
+  margin-top: -100px;
+}
 /* Animation */
 @@keyframes showModal {
   from {
@@ -399,6 +401,7 @@ input:checked+.slider:before {
 /* Add User */
 #add_user {
   display: none;
+  margin-top: -100px;
 }
 
 form {
