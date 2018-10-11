@@ -234,8 +234,8 @@ var open = false
 function handleNav() {
   if (open) {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "#3aafa9";
+   document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "#EDEAE5";
     open = !open;
   } else {
     document.getElementById("mySidenav").style.width = "250px";
