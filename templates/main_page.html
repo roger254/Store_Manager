@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="../css/main_page.css">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,10 +22,10 @@
     <div class="main_div">
       <div class="nav_div">
         <div class="header_div">
-          <button type="button" name="button" onclick="handleNav()" id="openMenuBtn">Menu Button</button>
+          <button type="button" name="button"  onclick="handleNav()" id="openMenuBtn">Open Menu</button>
           <div class="switch_button_div">
             <label class="switch">
-              <input type="checkbox" name="user" id="switchInput">
+              <input type="checkbox" name="user" id="switchInput" >
               <span class="slider round"></span>
             </label>
           </div>
@@ -34,7 +34,7 @@
 
       <div class="center_div">
         <div class="wrap_div">
-          <button type="button" name="searchButton" onclick="showItem()">Search</button>
+          <button type="button" name="searchButton" onclick="showSearchInput()" id="searchButton">Search</button>
           <input id="searchInput" type="search" name="searchedItem" placeholder="Search For: ">
         </div>
       </div>
@@ -142,7 +142,7 @@
             </div>
           </div>
           <span class="exit">&times</span>
-          <h2 class= "modal_heading">All Users</h2>
+          <h2 class="modal_heading">All Users</h2>
         </div>
         <div class="sales_modal_body" id="sales_modal_id">
           <table class="item_table" id="sales_tables">

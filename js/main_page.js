@@ -132,11 +132,17 @@ var view_user_button = document.getElementById("view_add_user");
 var view_items = document.getElementById("view_items_modal");
 var add_user_modal = document.getElementById("add_user");
 var close = document.getElementsByClassName("exit");
+var menuButton = document.getElementById('openMenuBtn');
+var searchButton = document.getElementById("searchButton");
 
+// Default values
+var hashCol = "#222";
+var backgroundColor = "background: radial-gradient(circle closest - corner at center 125 px, "+ hashCol+ ",  black 40 %)no - repeat;";
+ menuButton.className = "fas fa-angle-double-right";
 //DOM Functions
 
 // show and hide the search input
-function showItem() {
+function showSearchInput() {
   if (searchInput.style.visibility == "visible") {
     searchInput.style.visibility = "hidden";
   } else {
@@ -233,11 +239,13 @@ function showItems() {
 var open = false
 function handleNav() {
   if (open) {
+    menuButton.className = "fas fa-angle-double-right";
     document.getElementById("mySidenav").style.width = "0";
-   document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "#EDEAE5";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = backgroundColor;
     open = !open;
   } else {
+    menuButton.className = "fas fa-angle-double-left";
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
