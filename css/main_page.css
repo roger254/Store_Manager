@@ -298,7 +298,7 @@ input:checked+.slider:before {
 }
 
 .modal_body {
-  padding: 2px 16px;
+  /* padding: 2px 16px; */
   background-color: #46343e;
 }
 
@@ -353,7 +353,7 @@ input:checked+.slider:before {
 .modal_header {}
 
 .modal_footer, .modal_header {
-  padding: 2px 16px;
+  /* padding: 2px 16px; */
   background-color: #026670;
   /* color: #faed26; */
 }
@@ -361,6 +361,16 @@ input:checked+.slider:before {
 .modal_footer {
   height: 50px;
   text-align: center;
+}
+
+.buttonFooter{
+  height: 55px;
+}
+
+.buttonFooter button {
+  text-align: center;
+  float: none;
+  margin-left: 80px;
 }
 
 /* Table */
