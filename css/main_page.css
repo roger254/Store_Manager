@@ -244,7 +244,14 @@ input:checked+.slider:before {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.3);
 }
+#users_modal .modal_header{
+  height: 60px;
+}
 
+.modal_heading{
+  text-align: center;
+  font-variant: small-caps;
+}
 .modal_wrap {
   position: relative;
   background-color: #fefefe;
@@ -395,6 +402,7 @@ form {
 }
 
 .form {
+  margin: auto;
   width: 340px;
   height: 440px;
   background: #e6e6e6;
