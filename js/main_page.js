@@ -138,6 +138,7 @@ var searchButton = document.getElementById("searchButton");
 // Default values
 var hashCol = "#222";
 var backgroundColor = "background: radial-gradient(circle closest - corner at center 125 px, " + hashCol + ",  black 40 %)no - repeat;";
+var backgroundColor = "linear-gradient(135deg, #00C4FF, #9D1BB2)"
 menuButton.className = "fas fa-angle-double-right";
 //DOM Functions
 
@@ -187,13 +188,13 @@ function displayItem(itemName) {
 }
 
 function appendRow() {
-    var tbl = document.getElementById('my_table'), // table reference
-        row = tbl.insertRow(tbl.rows.length),      // append table row
-        i;
-    // insert table cells to the new row
-    for (i = 0; i < tbl.rows[0].cells.length; i++) {
-        createCell(row.insertCell(i), i, 'row');
-    }
+  var tbl = document.getElementById('my_table'), // table reference
+    row = tbl.insertRow(tbl.rows.length), // append table row
+    i;
+  // insert table cells to the new row
+  for (i = 0; i < tbl.rows[0].cells.length; i++) {
+    createCell(row.insertCell(i), i, 'row');
+  }
 }
 
 //display modal on pressing 'Enter'
@@ -206,7 +207,7 @@ searchInput.onsearch = function() {
   displayItem(searchItem)
 }
 
-// // make each row have a event lister
+//  make each row have a event lister
 // function onRowClick(tableId, callback) {
 //   var table = document.getElementById(tableId);
 //   var rows = table.getElementsByTagName("tr");
@@ -222,14 +223,14 @@ searchInput.onsearch = function() {
 var table = document.getElementById("my_table");
 var rows = table.rows;
 for (var i = 1; i < rows.length; i++) {
-    rows[i].onclick = (function (e) {
-        var rowid = (this.cells[0].innerHTML);
-        var j = 0;
-        var td = e.target;
-        while( (td = td.previousElementSibling) != null )
-            j++;
-        alert(rows[0].cells[j].innerHTML);
-    });
+  rows[i].onclick = (function(e) {
+    var rowid = (this.cells[0].innerHTML);
+    var j = 0;
+    var td = e.target;
+    while ((td = td.previousElementSibling) != null)
+      j++;
+    alert(rows[0].cells[j].innerHTML);
+  });
 }
 //return each rows value when clicked
 // onRowClick('my_table', function(row) {
@@ -283,6 +284,7 @@ function handleNav() {
     open = !open;
   }
 }
+document.getElementById("searchText").innerHTML = "Click search to search"
 
 //display text while typing
 function displayText() {
@@ -315,31 +317,31 @@ function displayText() {
 //     buttons[i].disable = false;
 //   }
 // }
-function run() {
-    var t = document.getElementById('my_table');
-    var rows = t.rows; //rows collection - https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement
-    for (var i=0; i<rows.length; i++) {
-        rows[i].onclick = function () {
-            if (this.parentNode.nodeName == 'THEAD') {
-                return;
-            }
-            // var cells = this.cells; //cells collection
-            // var f1 = document.getElementById('firstname');
-            // var f2 = document.getElementById('lastname');
-            // var f3 = document.getElementById('age');
-            // var f4 = document.getElementById('total');
-            // var f5 = document.getElementById('discount');
-            // var f6 = document.getElementById('diff');
-            // f1.value = cells[0].innerHTML;
-            // f2.value = cells[1].innerHTML;
-            // f3.value = cells[2].innerHTML;
-            // f4.value = cells[3].innerHTML;
-            // f5.value = cells[4].innerHTML;
-            // f6.value = cells[5].innerHTML;
-            alert('msg');
-        };
-    }
-}
+// function run() {
+//     var t = document.getElementById('my_table');
+//     var rows = t.rows; rows collection - https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement
+//     for (var i=0; i<rows.length; i++) {
+//         rows[i].onclick = function () {
+//             if (this.parentNode.nodeName == 'THEAD') {
+//                 return;
+//             }
+//              var cells = this.cells; cells collection
+//              var f1 = document.getElementById('firstname');
+//              var f2 = document.getElementById('lastname');
+//              var f3 = document.getElementById('age');
+//              var f4 = document.getElementById('total');
+//              var f5 = document.getElementById('discount');
+//              var f6 = document.getElementById('diff');
+//              f1.value = cells[0].innerHTML;
+//              f2.value = cells[1].innerHTML;
+//              f3.value = cells[2].innerHTML;
+//              f4.value = cells[3].innerHTML;
+//              f5.value = cells[4].innerHTML;
+//              f6.value = cells[5].innerHTML;
+//             alert('msg');
+//         };
+//     }
+// }
 // var table = document.getElementById("my_table");
 // if (table != null) {
 //     for (var i = 0; i < table.rows.length; i++) {

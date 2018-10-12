@@ -2,9 +2,10 @@ body, html {
   width: 100%;
   margin: auto;
   height: 100%;
-  background: radial-gradient(circle closest-corner at center 125px,
+  /* background: radial-gradient(circle closest-corner at center 125px,
     #222,
-    black 100%) no-repeat;
+    black 100%) no-repeat; */
+  background: linear-gradient(135deg, #00C4FF, #9D1BB2);
 }
 
 #main {
@@ -261,9 +262,11 @@ input:checked+.slider:before {
   animation-name: showModal;
   animation-duration: 0.5s
 }
-#add_user{
+
+#add_user {
   margin-top: -100px;
 }
+
 /* Animation */
 @@keyframes showModal {
   from {
@@ -357,7 +360,7 @@ input:checked+.slider:before {
   text-align: center;
 }
 
-.buttonFooter{
+.buttonFooter {
   height: 55px;
 }
 
@@ -508,4 +511,45 @@ form {
 .typewriter {
   border: 1px red;
   height: 100px;
+}
+
+.typing {
+  margin-top: -314px !important;
+}
+
+.typing>* {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingAnim 2s steps(50);
+}
+
+.typing>*::after {
+  /* content: ". ."; */
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: .35em;
+}
+
+.typing>*::before {
+  /* content: ""; */
+  position: absolute;
+  display: block;
+  top: 2.1em;
+  left: .25em;
+  width: 1em;
+  height: .1em;
+  border-radius: 100%;
+  background: #fff;
+  animation: typingSpeak .5s steps(2);
+  animation-iteration-count: 5;
+}
+
+@keyframes typingAnim{
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes typingSpeak{
+  0% { width: 1em; height: .1em }
+  100% { width: 1em; height: .5em; }
 }
