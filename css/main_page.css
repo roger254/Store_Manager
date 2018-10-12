@@ -116,17 +116,6 @@ input:checked+.slider:before {
   margin-left: 30px;
 }
 
-/* .side_div ul {
-  height: 450px;
-}
-
-.side_div ul li {
-  color: #feffff;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 100px;
-  margin-right: 30px;
-} */
 /* The side navigation menu */
 .sidenav {
   height: 100%;
@@ -212,13 +201,18 @@ input:checked+.slider:before {
 
 .center_div {
   width: 400px;
-  margin: auto;
   position: absolute;
   left: 250px;
   top: 100px;
-  right: 0;
+  right: 300px;
   height: 150px;
   text-align: center;
+}
+
+#searchText {
+  font-size: 50px;
+  font-variant: small-caps;
+  color: white;
 }
 
 .wrap_div button, input {
@@ -509,4 +503,9 @@ form {
   font-size: 20px;
   font-variant: small-caps;
   font-size-adjust: auto;
+}
+
+.typewriter {
+  border: 1px red;
+  height: 100px;
 }

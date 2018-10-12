@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="../css/main_page.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -35,7 +35,10 @@
       <div class="center_div">
         <div class="wrap_div">
           <button type="button" name="searchButton" onclick="showSearchInput()" id="searchButton">Search</button>
-          <input id="searchInput" type="search" name="searchedItem" placeholder="Search For: ">
+          <input id="searchInput" type="search" name="searchedItem" placeholder="Search For: " oninput="displayText()">
+          <div class="typewriter">
+            <h1 id="searchText"></h1>
+          </div>
         </div>
       </div>
     </div>
@@ -53,22 +56,9 @@
               <th>Price</th>
               <th>Quantity</th>
             </tr>
-
-            <tr>
-              <td>Item 1</td>
-              <td>250</td>
-              <td>500</td>
-            </tr>
-            <tr>
-              <td>Item 2</td>
-              <td>350</td>
-              <td>400</td>
-            </tr>
-            <tr>
-              <td>Item 3</td>
-              <td>590</td>
-              <td>250</td>
-            </tr>
+            <!-- <tr> <td>Item 1</td> <td>250</td> <td>500</td> </tr> <tr>
+            <td>Item 2</td> <td>350</td> <td>400</td> </tr> <tr> <td>Item 3</td>
+            <td>590</td> <td>250</td> </tr> -->
           </table>
         </div>
         <div class="modal_footer">
@@ -185,7 +175,7 @@
           <h2>All Inventory</h2>
         </div>
         <div class="modal_body" id="modal_body_id">
-          <table class="item_table" id="my_table">
+          <table class="item_table" >
             <tr>
               <th>Name</th>
               <th>Price</th>
