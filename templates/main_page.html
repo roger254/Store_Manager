@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/main_page.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="sidenav" id="mySidenav">
+    <h1 id="main_heading">Web-Store</h1>
+    <ul>
+      <li><a href="#" onclick="salesButton()">View Sales</a></li>
+      <li><a href="#" onclick="showItems()">View Items</a></li>
+      <li><a href="#" onclick="showUsers()">View User</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <div class="main_div">
+      <div class="nav_div">
+        <div class="header_div">
+          <button type="button" name="button" onclick="handleNav()" id="openMenuBtn">Open Menu</button>
+          <div class="switch_button_div">
+            <label class="switch">
+              <input type="checkbox" name="user" id="switchInput">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="center_div">
+        <div class="wrap_div">
+          <button type="button" name="searchButton" onclick="showSearchInput()" id="searchButton">Search</button>
+          <input id="searchInput" type="search" name="searchedItem" placeholder="Search For: " oninput="displayText()">
+          <div class="typewriter">
+            <h1 id="searchText"></h1>
+          </div>
+          <div class="typing">
+          <h1>STORE MANAGER</h1>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Search Item Modal-->
+    <div class="main_modal" id="main_modal">
+      <div class="modal_wrap">
+        <div class="modal_header">
+          <span class="exit">&times</span>
+          <h2>Searched Item:</h2>
+        </div>
+        <div class="modal_body" id="modal_body_id">
+          <table class="item_table" id="my_table">
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+            <!-- <tr> <td>Item 1</td> <td>250</td> <td>500</td> </tr> <tr>
+            <td>Item 2</td> <td>350</td> <td>400</td> </tr> <tr> <td>Item 3</td>
+            <td>590</td> <td>250</td> </tr> -->
+          </table>
+        </div>
+        <div class="modal_footer">
+          <h2 id="modal_footer_text">Footer</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Sales Modal -->
+    <div class="main_modal" id="sales_modal">
+      <div class="modal_wrap">
+        <div class="modal_header">
+          <div class="dropdown">
+            <button type="button" name="selectUserButton" class="dropdownBtn admin">Select User</button>
+            <div class="dropdown-options">
+              <a href="#">Attendant 1</a>
+              <a href="#">Attendant 2</a>
+              <a href="#">Attendant 3</a>
+              <a href="#">Attendant 4</a>
+            </div>
+          </div>
+          <span class="exit">&times</span>
+          <h2>All Items</h2>
+        </div>
+        <div class="sales_modal_body" id="sales_modal_id">
+          <table class="item_table" id="sales_tables">
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+            <tr>
+              <td>Item 1</td>
+              <td>250</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Item 2</td>
+              <td>350</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>Item 3</td>
+              <td>590</td>
+              <td>250</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal_footer">
+        </div>
+      </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="main_modal" id="users_modal">
+      <div class="modal_wrap">
+        <div class="modal_header">
+          <div class="addUser_div">
+            <button type="button" class="dropdownBtn" onclick="addUserForm()" id="view_add_user" name="button">Add User</button>
+            <div id="add_user">
+              <form class="form">
+                <h2>Add User</h2>
+                <p type="Name:"><input placeholder="User Name"></input></p>
+                <p type="Password:"><input type="password" placeholder="Password"></input></p>
+                <p type="Confirm Password:"><input type="password" placeholder="Confirm Password"></input></p>
+                <button onclick="addUser()">Add User</button>
+                <div>
+                  <span class="fa fa-phone"></span>Web Store
+                  <span class="fa fa-envelope-o"></span> contact@company.com
+                </div>
+              </form>
+            </div>
+          </div>
+          <span class="exit">&times</span>
+          <h2 class="modal_heading">All Users</h2>
+        </div>
+        <div class="sales_modal_body" id="sales_modal_id">
+          <table class="item_table" id="sales_tables">
+            <tr>
+              <th>Name</th>
+              <th>Password</th>
+              <th>Days Working</th>
+              <th>Total Sales</th>
+            </tr>
+            <tr>
+              <td>User 1</td>
+              <td>pass1</td>
+              <td>5</td>
+              <td>3000</td>
+            </tr>
+            <tr>
+              <td>User 2</td>
+              <td>pass2</td>
+              <td>4</td>
+              <td>4000</td>
+            </tr>
+            <tr>
+              <td>User 3</td>
+              <td>pass2</td>
+              <td>4</td>
+              <td>5000</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal_footer">
+        </div>
+      </div>
+    </div>
+
+    <!-- View Item Modal -->
+    <div class="main_modal" id="view_items_modal">
+      <div class="modal_wrap">
+        <div class="modal_header">
+          <span class="exit">&times</span>
+          <h2>All Inventory</h2>
+        </div>
+        <div class="modal_body" id="modal_body_id">
+          <table class="item_table">
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+
+            <tr>
+              <td>Item 1</td>
+              <td>250</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Item 2</td>
+              <td>350</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>Item 3</td>
+              <td>590</td>
+              <td>250</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal_footer buttonFooter">
+          <button type="button" class="dropdownBtn" name="addItem">Add Item</button>
+          <button type="button" class="dropdownBtn" name="editItem">Edit Item</button>
+          <button type="button" class="dropdownBtn" name="deleteItem">Delete Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../js/main_page.js">
+  </script>
+</body>
+
+</html>
